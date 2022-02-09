@@ -1,5 +1,5 @@
-#daq_ch domain det_def CloverName Theta Phi Time_Offset UpperThresholdCS cs_dom offset and slope nb_par_cal cal_pars 
-000  00 3  9857  0 37 0		25 	00  1 2 -81.7751 1.43577 
+#daq_ch domain det_def CloverName Time_Offset Theta Phi Threshold cs_dom nothing nb_par_cal cal_pars 
+000  00 3  9857  0 37 0	25 	00  1 2 -81.7751 1.43577 
 002  01 3  5814  0 37 72	25 	01  1 2 -866.194 1.42876 
 004  02 3  9862  0 37 144	10	02  1 2 -95.0288 1.40636
 006  03 3  9850  0 37 216 	15  	03  1 2 -66.191 1.45365

@@ -5,5 +5,5 @@ labr_labr 33 3000
 labr_bgo  45 20000
 labr_hpge 13 40000
 beta      1111 0.048
-bunch_length 1000 200000
+bunch_length 1000 400000
 bunch_reset 1001 180000 

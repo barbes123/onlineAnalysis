@@ -13,20 +13,20 @@ space=" "
 
 runnb=$FIRSTrun
 volnb=$volume1
-command="hadd sorted_run_$runnb"."root "
+command="hadd selected_run_$runnb"."root "
 
 
-if test -f "sorted_run_$runnb"."root"
+if test -f "selected_run_$runnb"."root"
    then
-   rm "sorted_run_$runnb"."root"
+   rm "selected_run_$runnb"."root"
 fi
 
 while test $volnb -le $volume2
  do 
- echo "sorted_run_$runnb""_$volnb.root"
-   if test -f "sorted_run_$runnb""_$volnb.root"
+ echo "selected_run_$runnb""_$volnb.root"
+   if test -f "selected_run_$runnb""_$volnb.root"
    then
-     command="$command""sorted_run_$runnb""_$volnb.root""$space"
+     command="$command""selected_run_$runnb""_$volnb.root""$space"
      echo "$command"
      volnb=$(($volnb + 1))
      else 

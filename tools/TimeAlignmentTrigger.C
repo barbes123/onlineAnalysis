@@ -33,7 +33,7 @@ void TimeAlignementTrigger(TH2 *matrix, float alignment_pos=0.)
    for(int jj=0 ; jj<=matrix->GetXaxis()->GetNbins() ; jj++){
     matrix->ProjectionY(proj_y->GetName(),jj,jj);
     if (proj_y->GetEntries() == 0) continue;
-    proj_y->GetXaxis()->SetRangeUser(50e3,250e3);
+    proj_y->GetXaxis()->SetRangeUser(0,3e5);
     int max_bin = proj_y->GetMaximumBin();
     float max_value = proj_y->GetXaxis()->GetBinCenter(max_bin);
     c1->cd();
@@ -50,7 +50,7 @@ void TimeAlignementTrigger(TH2 *matrix, float alignment_pos=0.)
     //outputFile << j+channel_offset-1 << "  " << max_value<< " offset: "<< alignment_pos - max_value <<"\n";;
     outputFile << jj-1 << "  " << proj_y-> GetBinCenter(max_bin) - alignment_pos <<"\n";;
     
-    //c1->WaitPrimitive();
+    c1->WaitPrimitive();
     proj_y->Reset();
    }
     outputFile.close();

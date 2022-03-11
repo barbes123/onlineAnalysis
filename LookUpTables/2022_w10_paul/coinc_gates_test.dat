@@ -1,8 +1,15 @@
 #coinc_name coinc_id gate_ps
 hpge_hpge 11 40000
+<<<<<<< HEAD
 hpge_bgo  15 20000
 labr_labr 33 40000
 labr_bgo  35 40000
+=======
+#hpge_seg  12 100000
+#hpge_bgo  15 20000
+labr_labr 33 20000
+#labr_bgo  45 20000
+>>>>>>> 216c55c3792549b6d41a553c5b2b7f8633b3e07c
 #labr_hpge 13 40000
 det_type_trg 9999 3
 beta      1111 0

@@ -57,25 +57,32 @@ echo "Will run the calib for domains $FIRSTdomain upto $LASTdomain "
    fi
 ##################################      
    
+#for domains 33 37 40 41
+lim1=40
+lim2=700
+fwhm=2
+ampl=20
+   
    
 domnb=$FIRSTdomain
 while test $domnb -le $LASTdomain
 do
  echo "Now starting calib for domain $domnb"	
  
- if [[ "$domnb" == "35" ]];
+ if [[ "$domnb" == "34" ]] ||  [[ "$domnb" == "35" ]]||  [[ "$domnb" == "36" ]];
+ then
+  lim1=20
+  lim2=400
+  fwhm=1.8
+  ampl=100
+  echo "changed for domain $domnb"
+ elif [[ "$domnb" == "32" ]];
  then
   lim1=50
-  lim2=800
-  fwhm=7
-  ampl=40
-  echo "changed for segment $domnb"
- else
-  lim1=50
-  lim2=800
-  fwhm=7
-  ampl=40
-  echo "changed for segment $domnb"
+  lim2=1500
+  fwhm=1.8
+  ampl=20
+  echo "changed for domain $domnb"
  fi
  
  if test -f "mDelila_raw_py_$domnb.spe" 

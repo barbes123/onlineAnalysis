@@ -75,7 +75,7 @@ do
   ampl=100
   echo "changed for core $domnb"
  else
-  lim1=85
+  lim1=50
   lim2=1500
   fwhm=46
   ampl=10

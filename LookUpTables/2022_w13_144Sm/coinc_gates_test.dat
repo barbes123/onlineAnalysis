@@ -4,6 +4,7 @@ hpge_hpge 	11 	100000
 labr_labr 	33 	5000
 #labr_bgo  	35 	40000
 labr_hpge 	13 	100000
+labr_solar 	37 	50000
 det_type_trg 	9999 	1
 beta      	1111 	0
 bunch_length 	1000 	100000000

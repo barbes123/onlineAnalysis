@@ -13,12 +13,15 @@ space=" "
 
 runnb=$FIRSTrun
 volnb=$volume1
-command="hadd sum_selected_run_$runnb""_$volume1""_$volume2"."root "
 
+fileout="sum_selected_run_$runnb""_$volume1""_$volume2"."root"
+#command="hadd sum_selected_run_$runnb""_$volume1""_$volume2"."root "
+command="hadd $fileout "
+echo "Output file : $command"
 
-if test -f "selected_run_$runnb"."root"
+if test -f "$fileout"
    then
-   rm "selected_run_$runnb"."root"
+   rm "$fileout"
 fi
 
 while test $volnb -le $volume2

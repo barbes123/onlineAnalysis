@@ -13,7 +13,7 @@ space=" "
 
 runnb=$FIRSTrun
 volnb=$volume1
-command="hadd selected_run_$runnb"."root "
+command="hadd sum_selected_run_$runnb""_$volume1""_$volume2"."root "
 
 
 if test -f "selected_run_$runnb"."root"

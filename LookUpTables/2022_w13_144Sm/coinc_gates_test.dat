@@ -1,14 +1,20 @@
+#------------------------------------
 #coinc_name coinc_id gate_ps
+#------------------------------------
 hpge_hpge 	11 	100000
 #hpge_bgo  	15 	20000
 labr_labr 	33 	5000
-#labr_bgo  	35 	40000
+labr_bgo  	35 	2000
 labr_hpge 	13 	100000
 labr_solar 	37 	50000
-det_type_trg 	9999 	1
+#------------------------------------
+#builder_parameters index value_ps
+#------------------------------------
+trg_det_type	9998	0
+trg_channel 	9999 	16
+window_length 	1000 	1000000000
+pre_window	1002	4000000
+#------------------------------------
+#reaction param
+#------------------------------------
 beta      	1111 	0
-bunch_length 	1000 	100000000
-det_type_trg 	9999 	105
-beta      	1111 	0
-#bunch_length 	1000 	100000000
-bunch_length 	1000 	100000

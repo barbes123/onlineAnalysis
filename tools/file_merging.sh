@@ -4,6 +4,7 @@
 FIRSTrun=$1
 volume1=$2
 volume2=$3
+Ncores=${4:-1}
 
 echo "Will run the selector for runs $FIRSTrun upto $LASTrun "
 echo "Will run the selector for volumes $volume1 upto $volume2 "		
@@ -16,7 +17,7 @@ volnb=$volume1
 
 fileout="sum_selected_run_$runnb""_$volume1""_$volume2"."root"
 #command="hadd sum_selected_run_$runnb""_$volume1""_$volume2"."root "
-command="hadd $fileout "
+command="hadd $fileout -j$Ncores"
 echo "Output file : $command"
 
 if test -f "$fileout"

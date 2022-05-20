@@ -85,9 +85,9 @@ do
   ampl=100
   echo "changed for core $domnb"
  else
-  lim1=400
-  lim2=1600
-  fwhm=40
+  lim1=100
+  lim2=600
+  fwhm=16
   ampl=20
   echo "changed for segment $domnb"
  fi
@@ -97,8 +97,8 @@ do
       #get full data on calibration
       #/data/live/IT/tools/RecalEnergy -spe mDelila_raw_py_$domnb.spe -fmt A 16384 -lim $lim1 $lim2 -dwa $fwhm $ampl -60Co -v 2 -poly1 -ener 1460.82
       #/data/live/IT/tools/RecalEnergy -spe mDelila_raw_py_$domnb.spe -fmt A 16384 -lim $lim1 $lim2 -dwa $fwhm $ampl -60Co -v 2 -poly1 -ener 1460.82 > fulldata.calib
-      ~/DelilaSorting/tools/RecalEnergy -spe mDelila_raw_py_$domnb.spe -fmt A 16384 -lim $lim1 $lim2 -dwa $fwhm $ampl -60Co -v 2 -poly1
-      ~/DelilaSorting/tools/RecalEnergy -spe mDelila_raw_py_$domnb.spe -fmt A 16384 -lim $lim1 $lim2 -dwa $fwhm $ampl -60Co -v 2 -poly1 > fulldata.calib
+      ~/onlineAnalysis/tools/RecalEnergy -spe mDelila_raw_py_$domnb.spe -fmt A 16384 -lim $lim1 $lim2 -dwa $fwhm $ampl -60Co -v 2 -poly1
+      ~/onlineAnalysis/tools/RecalEnergy -spe mDelila_raw_py_$domnb.spe -fmt A 16384 -lim $lim1 $lim2 -dwa $fwhm $ampl -60Co -v 2 -poly1 > fulldata.calib
       #delete first 14 lines
       awk 'NR > 14 { print }' fulldata.calib >  temp.calib
       

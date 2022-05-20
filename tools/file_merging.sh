@@ -17,7 +17,7 @@ volnb=$volume1
 
 fileout="sum_selected_run_$runnb""_$volume1""_$volume2"."root"
 #command="hadd sum_selected_run_$runnb""_$volume1""_$volume2"."root "
-command="hadd $fileout -j$Ncores"
+command="hadd $fileout -j $Ncores "
 echo "Output file : $command"
 
 if test -f "$fileout"

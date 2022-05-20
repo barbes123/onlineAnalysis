@@ -10,14 +10,14 @@ labr_bgo  	35 	2000
 #------------------------------------
 #builder_parameters index value_ps
 #------------------------------------
-trg_det_type	9998	0
-trg_domain 	9999 	16
-window_length 	1000 	10000000
-pre_window	1002	400000
+trg_det_type	9998	7
+trg_domain 	9999 	201
+window_length 	1000 	1000000
+pre_window	1002	500000
 #------------------------------------
 #reaction param
 #------------------------------------
 #beta      	1111 	0
 #------------------------------------
-det_present 9997 7
+det_present 9997 357
 #------------------------------------

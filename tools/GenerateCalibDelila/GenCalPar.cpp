@@ -20,7 +20,7 @@ void GenCalPar()
   auto fileName = "./input.dat";
   std::ifstream fin(fileName);
 
-  constexpr int nMods = 8;
+  constexpr int nMods = 10;
   constexpr int nChs = 16;
   std::array<std::array<calPar, nChs>, nMods> par;
   for(auto iMod = 0; iMod < nMods; iMod++) {

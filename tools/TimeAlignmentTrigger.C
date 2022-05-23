@@ -35,8 +35,9 @@ void TimeAlignementTrigger(TH2 *matrix, float alignment_pos=0.)
    for(int jj=0 ; jj<=matrix->GetXaxis()->GetNbins() ; jj++){
     matrix->ProjectionY(proj_y->GetName(),jj,jj);    
     if (proj_y->GetEntries() == 0) continue;
-    proj_y->GetXaxis()->SetRangeUser(-50e3,150e3);
-//     proj_y2->GetXaxis()->SetRangeUser(-100e3,200e3);
+    proj_y->GetXaxis()->SetRangeUser(-50e3,80e4);
+    proj_y->Rebin(8);
+//     proj_y2->GetXaxis()->SetRangeUser(-100e3,100e4);
     
     proj_y->SetTitle(Form("dom%i",jj));
 //     proj_y2->SetTitle(Form("dom%i_precise",jj));

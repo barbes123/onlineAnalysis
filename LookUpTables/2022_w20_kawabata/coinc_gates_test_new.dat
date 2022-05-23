@@ -3,17 +3,17 @@
 #------------------------------------
 #hpge_hpge 	11 	100000
 #hpge_bgo  	15 	20000
-labr_labr 	33 	5000
-labr_bgo  	35 	2000
+labr_labr 	33 	40000
+#labr_bgo  	35 	2000
 #labr_hpge 	13 	100000
-#labr_solar 	37 	50000
+labr_elissa 	37 	40000
 #------------------------------------
 #builder_parameters index value_ps
 #------------------------------------
-trg_det_type	9998	7
-trg_domain 	9999 	201
-window_length 	1000 	1000000
-pre_window	1002	500000
+trg_det_type	9998	0
+trg_domain 	9999 	200
+window_length 	1000 	1e6
+pre_window	1002	0
 #------------------------------------
 #reaction param
 #------------------------------------

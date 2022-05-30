@@ -1,0 +1,7 @@
+How to monitor silicon
+
+1. ./run_calib
+2. go to outputdir
+3. .x ../check.C
+
+PS everything from folde "jp" was inside the SiliconSpy folder

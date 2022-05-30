@@ -1,0 +1,77 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <TCanvas.h>
+#include <TEventList.h>
+#include <cstdint>
+#include <vector>
+#include <signal.h>
+#include <map>
+#include <algorithm>
+#include <regex>
+#include <TH1F.h>
+#include <TH2.h>
+#include <TROOT.h>
+#include <TTree.h>
+#include <TFile.h>
+
+
+#define LENGTH 2000
+#define N_BOARD 6
+#define N_CH 16
+
+int eventbuild(int _iEventBegin = 0, int _iEventEnd = -1){
+
+                  
+
+  TFile *fin =new TFile("/data/2022_w20_kawabata/root_files/run2084_1_ssgant1.root");
+  TTree *tree = (TTree*)fin->Get("ELIADE_Tree");
+
+  UChar_t tmp_board;
+  UChar_t tmp_ch;
+  ULong64_t tmp_ts;
+  USort_t tmp_chargelong;
+  
+  tree->SetBranchAddress("Mod", &tmp_board);
+  tree->SetBranchAddress("Ch", &tmp_ch);
+  tree->SetBranchAddress("TimeStamp", &tmp_ts);
+  tree->SetBranchAddress("ChargeLong", &tmp_chargelong);
+
+
+  
+  TFile *fout =new TFile("/data/2022_w20_kawabata/eventbuild/run2084_1_ssgant1.root");
+  TTree *event = new TTree("event","event");
+  
+  int board[6][16];
+  int ch[6][16];
+  double ts[6][16];
+
+  double ADC[6][16]={};
+
+  event->Branch("board",board,"board[6][16]/I");
+  event->Branch("ch",ch,"ch[6][16]/I");
+  event->Branch("ADC",ADC,"ch[6][16]/I");
+  
+  double prets=0;
+  UInt_t N=tree->GetEntries();
+
+  for(int evtn=0; evtn<N; evtn++){
+    tree->GetEntry(evtn);
+
+    /// for channel mapping
+    board=(int)tmp_board;
+    ch=(int)tmp_ch;
+    ts=(double)ts;
+    ///
+
+    
+
+    
+    if(ts>0){
+      prets = ts;    
+    }else{
+      continue;
+    }
+  }
+  return 0;
+}

@@ -76,8 +76,8 @@ do
   echo "changed for core $domnb"
  else
   lim1=50
-  lim2=1500
-  fwhm=46
+  lim2=400
+  fwhm=11
   ampl=10
   echo "changed for segment $domnb"
  fi
@@ -87,8 +87,8 @@ do
       #get full data on calibration
       #/data/live/IT/tools/RecalEnergy -spe mDelila_raw_py_$domnb.spe -fmt A 16384 -lim $lim1 $lim2 -dwa $fwhm $ampl -60Co -v 2 -poly1 -ener 1460.82
       #/data/live/IT/tools/RecalEnergy -spe mDelila_raw_py_$domnb.spe -fmt A 16384 -lim $lim1 $lim2 -dwa $fwhm $ampl -60Co -v 2 -poly1 -ener 1460.82 > fulldata.calib
-      ~/EliadeSorting/EliadeTools/RecalEnergy -spe mDelila_raw_py_$domnb.spe -fmt A 16384 -lim $lim1 $lim2 -dwa $fwhm $ampl -ener 121.779 -ener 244.693 -ener 344.272 -ener 778.890 -ener 964.014 -v 2 -poly2
-      ~/EliadeSorting/EliadeTools/RecalEnergy -spe mDelila_raw_py_$domnb.spe -fmt A 16384 -lim $lim1 $lim2 -dwa $fwhm $ampl -ener 121.779 -ener 244.693 -ener 344.272 -ener 778.890 -ener 964.014 -v 2 -poly2 > fulldata.calib
+      ~/onlineAnalysis/tools/RecalEnergy -spe mDelila_raw_py_$domnb.spe -fmt A 16384 -lim $lim1 $lim2 -dwa $fwhm $ampl -ener 121.779 -ener 244.693 -ener 344.272 -ener 778.890 -ener 964.014 -v 2 -poly2
+      ~/onlineAnalysis/tools/RecalEnergy -spe mDelila_raw_py_$domnb.spe -fmt A 16384 -lim $lim1 $lim2 -dwa $fwhm $ampl -ener 121.779 -ener 244.693 -ener 344.272 -ener 778.890 -ener 964.014 -v 2 -poly2 > fulldata.calib
       #delete first 14 lines
       awk 'NR > 14 { print }' fulldata.calib >  temp.calib
       

@@ -1,11 +1,12 @@
 #------------------------------------
 #coinc_name coinc_id gate_ps
 #------------------------------------
-hpge_hpge 	11 	100000
+#hpge_hpge 	11 	100000
 #hpge_seg 	12 	100000
-hpge_bgo  	15 	20000
-labr_labr 	33 	40000
-labr_bgo  	35 	2000
+#hpge_bgo  	15 	20000
+#labr_labr 	33 	40000
+#labr_bgo  	35 	2000
+#dee		177     40000
 #labr_hpge 	13 	100000
 #labr_elissa 	37 	40000
 #------------------------------------
@@ -17,7 +18,7 @@ window_length 	1000 	5e5
 pre_window	1002	0
 reference_dom   9996    500
 time_alignement 00	1
-FineTimeStamp   01     0
+FineTimeStamp   01     1
 Fold		 02     1  
 #------------------------------------
 #reaction param

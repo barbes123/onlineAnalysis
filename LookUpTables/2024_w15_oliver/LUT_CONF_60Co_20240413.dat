@@ -1,0 +1,29 @@
+#------------------------------------
+#coinc_name coinc_id gate_ps
+#------------------------------------
+#hpge_hpge 	11 	100000
+#hpge_seg 	12 	100000
+#hpge_bgo  	15 	20000
+labr_labr 	33 	40000
+labr_bgo  	35 	2000
+#dee		177     40000
+##labr_hpge 	13 	100000
+labr_elissa 	37 	40000
+#------------------------------------
+#builder_parameters index value_ps
+#------------------------------------
+trg_det_type	9998	3
+trg_domain 	9999 	500
+window_length 	1000 	5e5
+pre_window	1002	0
+reference_dom   9996    500
+time_alignement 00	1
+FineTimeStamp   01     1
+Fold		 02     1  
+#------------------------------------
+#reaction param
+#------------------------------------
+#beta      	1111 	0
+#------------------------------------
+det_present 9997 1 3 5 7 17
+#------------------------------------

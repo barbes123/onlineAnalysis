@@ -1,7 +1,7 @@
 #!/bin/bash
 
 runnb=$1
-runnb1=${2:-$runb}
+runnb1=${2:-$runnb}
 volume1=${3:-0}
 volume2=${4:-$volume1}
 nevents=${5:-0}
@@ -24,10 +24,10 @@ lut_path="$HOME/onlineAnalysis/LookUpTables/2024_w15_oliver/"
 lut_link="$HOME/EliadeSorting/"
 
 #lut_file="LUT_ELIFANT_20240409_60Co.dat"
-lut_file="LUT_ELIFANT_20240409_PuBeNi.dat"
+lut_file="LUT_ELIFANT_20240416_60Co.dat"
 #lut_ta="TimeCalibMaxBin_R10038.dat"
 #lut_ta="LUT_TA_TimeCalibMaxBin_R66.dat"
-lut_ta="LUT_TA_TimeCalibGaussian_R66.dat"
+lut_ta="LUT_TA_R71_TimeCalibGaussian.dat"
 #lut_conf="LUT_CONF_SI_TRG.dat"
 lut_conf="LUT_CONF_LaBr_TRG.dat"
 

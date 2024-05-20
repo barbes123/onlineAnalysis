@@ -3,20 +3,20 @@
 #------------------------------------
 #hpge_hpge 	11 	100000
 #hpge_seg 	12 	100000
-#hpge_bgo  	15 	20000
-labr_labr 	33 	4000
-#labr_bgo  	35 	40000
-#dee		177     1.5e5
+#hpge_bgo  	15 	1e5
+#labr_labr 	33 	4000
+labr_bgo  	35 	1e5
+dee		177     1e7
 #labr_hpge 	13 	1.5e5
-#labr_elissa 	37 	1.5e5
+labr_elissa 	37 	1e7
 #------------------------------------
 #builder_parameters index value_ps
 #------------------------------------
 trg_det_type	9998	3
-#trg_domain 	9999 	900
-window_length 	1000 	5e5
-pre_window	1002	0
-rf_time	9995    4e5
+#trg_domain 	9999 	100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115
+window_length 	1000 	1e7
+#pre_window	1002	0
+#rf_time	9995    4e5
 #------------------------------------
 #Extra procedures: 1-yes; 0-no
 #------------------------------------

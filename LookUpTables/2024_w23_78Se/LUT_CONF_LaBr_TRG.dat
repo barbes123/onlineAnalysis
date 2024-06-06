@@ -8,15 +8,16 @@ labr_labr 	33 	4e4
 labr_bgo  	35 	1e5
 dee		177     1e5
 #labr_hpge 	13 	1.5e5
-labr_elissa 	37 	1e7
-labr_hpge 	17 	1e7
+labr_elissa 	37 	1e6
+hpge_de_e 	1771 	1e6
+labr_hpge 	17 	1e6
 #------------------------------------
 #builder_parameters index value_ps
 #------------------------------------
 #trg_det_type	9998	-1
 trg_det_type	9998	3 5 7 17 1
 #trg_domain 	9999 	100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115
-window_length 	1000 	1e6
+window_length 	1000 	2e6
 #pre_window	1002	0
 #rf_time	9995    4e5
 #------------------------------------

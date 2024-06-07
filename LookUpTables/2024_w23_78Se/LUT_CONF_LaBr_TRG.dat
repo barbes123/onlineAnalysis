@@ -1,16 +1,16 @@
 #------------------------------------
 #coinc_name coinc_id gate_ps
 #------------------------------------
-hpge_hpge 	11 	1e5
+#hpge_hpge 	11 	1e5
 #hpge_seg 	12 	100000
-hpge_bgo  	15 	1e5
-labr_labr 	33 	4e4
-labr_bgo  	35 	1e5
+#hpge_bgo  	15 	1e5
+#labr_labr 	33 	4e4
+#labr_bgo  	35 	1e5
 dee		177     1e5
 #labr_hpge 	13 	1.5e5
-labr_elissa 	37 	1e6
-hpge_de_e 	1771 	1e6
-labr_hpge 	17 	1e6
+#labr_elissa 	37 	1e6
+hpge_de_e 	1771 	2e5
+#labr_hpge 	17 	1e6
 #------------------------------------
 #builder_parameters index value_ps
 #------------------------------------
@@ -27,6 +27,8 @@ Time_Alignement 00	1
 reference_dom  9996    700
 UseFineTS	01     1
 Fold		02     0  
+dEsector_Es     04     1	
+dEring_Es	05     0
 #------------------------------------
 #reaction param
 #------------------------------------

@@ -16,19 +16,16 @@ hpge_de_e 	1771 	2e5
 #------------------------------------
 #trg_det_type	9998	-1
 trg_det_type	9998	3 7 17 1
-#trg_domain 	9999 	100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115
 window_length 	1000 	1e6
-#pre_window	1002	0
-#rf_time	9995    4e5
 #------------------------------------
 #Extra procedures: 1-yes; 0-no
 #------------------------------------
 Time_Alignement 00	1
 reference_dom  9996    700
 UseFineTS	01     1
-Fold		02     0  
-dEsector_Es     04     1	
-dEring_Es	05     0
+DeeSector     0     1	
+DeeRing       0     0	
+ParticleCutGate 0 1
 #------------------------------------
 #reaction param
 #------------------------------------

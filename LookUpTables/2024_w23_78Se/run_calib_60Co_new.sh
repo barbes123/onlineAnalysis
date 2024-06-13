@@ -1,4 +1,8 @@
 #!/bin/bash
+#Convert mDelila_raw matrix to ascii using:
+# .L ~/onlineAnalysis/tools/hconverter.C+
+#hconverter("selected_run_159_999_eliadeS2.root")
+# copy this script to the selected_run_159_999_eliadeS2 folder
 
 FIRSTdomain=$1
 LASTdomain=${2:-$1}

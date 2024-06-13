@@ -25,23 +25,40 @@ lut_link="$HOME/EliadeSorting/"
 
 #lut_file="LUT_ELIFANT_20240409_60Co.dat"
 lut_file="LUT_ROSPHERE_20240605_152Eu_NOTA.dat"
-#lut_ta="zero_TA.dat"
-#lut_ta="LUT_TA_TimeCalib_run27.dat"
-#lut_ta="LUT_TA_R71_TimeCalibGaussian.dat"
-#lut_ta="LUT_TA_TimeCalibGaussian_R071_LABR.dat"
-#lut_ta="LUT_TA_TimeCalibGaussian_R071_Bunch.dat"
-#lut_ta="LUT_TA_TimeCalibMaxBin_R167_Bunch.dat"
-lut_ta="LUT_TA_run20.dat"
-#lut_conf="LUT_CONF_SI_TRG.dat"
-lut_conf="LUT_CONF_LaBr_TRG.dat"
+lut_ta="LUT_TA_run20.dat" #time-alignment
+lut_conf="LUT_CONF_LaBr_TRG.dat" 
+#lut_cut="cut_charged_test.root"
+
+#lut_cut="tcuts_new.root"
+lut_cut="tcuts_new.root"
 
 unlink "$lut_link""LUT_ELIADE.dat"
 unlink "$lut_link""LUT_ELIADE.json"
 unlink "$lut_link""LUT_TA.dat"
 unlink "$lut_link""LUT_CONF.dat"
+unlink "$lut_link""cut_charged_particles.root"
+
+
 
 if [ "$runnb" -ge "29" ]; then
 	lut_file="LUT_ROSPHERE_20240605_60Co.dat"
+fi
+
+if [ "$runnb" -eq "35" ]; then
+	lut_file="LUT_ROSPHERE_20240605_152Eu_NOTA.dat"
+	lut_ta="LUT_TA_run20.dat"
+	lut_conf="LUT_CONF_LaBr_TRG.dat"
+	#lut_cut="cut_charged_test.root"
+	lut_cut="tcuts_new.root"
+fi
+
+
+if [ "$runnb" -eq "20" ]; then
+	lut_file="LUT_ROSPHERE_20240605_152Eu_NOTA.dat"
+	lut_ta="LUT_TA_run20.dat"
+	lut_conf="LUT_CONF_LaBr_TRG.dat"
+	#lut_cut="cut_charged_test.root"
+	lut_cut="tcuts_new.root"
 fi
       
 ###########################LUT_ELIADE###s#####################
@@ -70,6 +87,15 @@ else
       unlink "$lut_link""LUT_CONF.dat"
       ln -s "$lut_path$lut_conf" "$lut_link""LUT_CONF.dat"
 fi
+
+###########################cut_charge_particle##########################
+if [ -z "$lut_cut" ]
+then
+      echo "cut_charged_particle is missing"
+else
+      unlink "$lut_link""cut_charged_particles.root"
+      ln -s "$lut_path$lut_cut" "$lut_link""cut_charged_particles.root"
+fi
 #############################################################
 
 echo "--------------------------------------------------------"
@@ -78,6 +104,7 @@ echo "--------------------------------------------------------"
 echo -ne "LUT_ELIADE file	: "; tput setaf 2; echo " $lut_file";tput sgr0;
 echo -ne "LUT_CONF file	: "; tput setaf 2; echo " $lut_conf";tput sgr0;
 echo -ne "LUT_TA file	: "; tput setaf 2; echo " $lut_ta";tput sgr0;
+echo -ne "LUT_CUT file	: "; tput setaf 2; echo " $lut_cut";tput sgr0;
 echo "--------------------------------------------------------"
 
 

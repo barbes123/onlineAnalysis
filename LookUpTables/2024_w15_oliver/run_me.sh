@@ -24,13 +24,19 @@ lut_path="$HOME/onlineAnalysis/LookUpTables/2024_w15_oliver/"
 lut_link="$HOME/EliadeSorting/"
 
 #lut_file="LUT_ELIFANT_20240409_60Co.dat"
-lut_file="LUT_ELIFANT_20240416_60Co.dat"
+#lut_file="LUT_ELIFANT_20240416_60Co.dat"
+lut_file="LUT_ELIFANT_20240416_60Co_only_dom500.dat"
 #lut_ta="TimeCalibMaxBin_R10038.dat"
 #lut_ta="LUT_TA_TimeCalibMaxBin_R66.dat"
 #lut_ta="LUT_TA_R71_TimeCalibGaussian.dat"
 #lut_ta="LUT_TA_TimeCalibGaussian_R071_LABR.dat"
 #lut_ta="LUT_TA_TimeCalibGaussian_R071_Bunch.dat"
-lut_ta=""
+#lut_ta="LUT_TA_TimeCalibGaussian_R071_LaBrBGO.dat"
+#lut_ta="LUT_TA_TimeCalibGaussian_R071_0.dat"
+#lut_ta=""
+lut_ta="LUT_TA_TimeCalibGaussian_R071_TrgTime.dat"
+#lut_ta="LUT_TA_TimeCalibGaussian_R71_B_ALL_BGO.dat"
+#lut_ta="LUT_TA_TimeCalibGaussian_R071_B_ALL_dets_to_100.dat"
 #lut_conf="LUT_CONF_SI_TRG.dat"
 lut_conf="LUT_CONF_LaBr_TRG.dat"
 
@@ -39,9 +45,16 @@ unlink "$lut_link""LUT_ELIADE.json"
 unlink "$lut_link""LUT_TA.dat"
 unlink "$lut_link""LUT_CONF.dat"
 
-if [ "$runnb" -eq "10038" ]; then
-	lut_file="LUT_ELIFANT_20240409_60Co.dat"
-	lut_conf="LUT_CONF_60Co_20240413.dat"
+
+if [ "$runnb" -eq "213" ]; then
+	#lut_ta=""
+	lut_conf="LUT_CONF_RUN206.dat"
+fi
+
+
+if [ "$runnb" -eq "206" ]; then
+	lut_ta=""
+	lut_conf="LUT_CONF_RUN206.dat"
 fi
       
 ###########################LUT_ELIADE###s#####################

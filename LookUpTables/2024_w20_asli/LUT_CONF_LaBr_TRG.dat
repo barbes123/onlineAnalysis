@@ -6,20 +6,21 @@
 #hpge_bgo  	15 	1e5
 #labr_labr 	33 	4000
 labr_bgo  	35 	1e5
-dee		177     1e7
+dee		177     1e6
 #labr_hpge 	13 	1.5e5
-labr_elissa 	37 	1e7
+labr_elissa 	37 	1e6
+deeEx 		1773 	1e6
 #------------------------------------
 #builder_parameters index value_ps
 #------------------------------------
-trg_det_type	9998	3
+trg_det_type	9998	3 7 17
 #trg_domain 	9999 	100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115
-window_length 	1000 	1e7
-#pre_window	1002	0
-#rf_time	9995    4e5
+window_length 	1000 	1e6
 #------------------------------------
 #Extra procedures: 1-yes; 0-no
 #------------------------------------
+DeeSector     0     1
+DeeRing       0     0
 Time_Alignement 00	1
 reference_dom  9996    500
 UseFineTS	01     1

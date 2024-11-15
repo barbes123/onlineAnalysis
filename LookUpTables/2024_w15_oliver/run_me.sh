@@ -25,7 +25,12 @@ lut_link="$HOME/EliadeSorting/"
 
 #lut_file="LUT_ELIFANT_20240409_60Co.dat"
 #lut_file="LUT_ELIFANT_20240416_60Co.dat"
-lut_file="LUT_ELIFANT_20240416_60Co_only_dom500.dat"
+
+#before OW calib I used this LUT
+#lut_file="LUT_ELIFANT_20240416_60Co_only_dom500.dat"
+lut_file="LUT_ELIFANT_20240416_60Co_only_dom500_ow_calib.dat"
+
+#lut_ta="LUT_TA_TimeCalibGaussian_R071_Bunch.dat
 #lut_ta="TimeCalibMaxBin_R10038.dat"
 #lut_ta="LUT_TA_TimeCalibMaxBin_R66.dat"
 #lut_ta="LUT_TA_R71_TimeCalibGaussian.dat"
@@ -46,16 +51,32 @@ unlink "$lut_link""LUT_TA.dat"
 unlink "$lut_link""LUT_CONF.dat"
 
 
-if [ "$runnb" -eq "213" ]; then
+
+if [ "$runnb" -ge "69" ] && [ "$runnb" -le "118" ]; then
 	#lut_ta=""
-	lut_conf="LUT_CONF_RUN206.dat"
+	lut_conf="LUT_CONF_LaBr_TRG_beta88.dat"
+fi	
+
+
+if [ "$runnb" -ge "120" ] && [ "$runnb" -le "151" ]; then
+	#lut_ta=""
+	lut_conf="LUT_CONF_LaBr_TRG_beta93.dat"
+fi
+	
+if [ "$runnb" -ge "153" ] && [ "$runnb" -le "215" ]; then
+	lut_conf="LUT_CONF_LaBr_TRG_beta68.dat"
+fi
+	
+if [ "$runnb" -ge "220" ] && [ "$runnb" -le "248" ]; then
+	#lut_ta=""
+	lut_conf="LUT_CONF_LaBr_TRG_beta64.dat"
 fi
 
 
-if [ "$runnb" -eq "206" ]; then
-	lut_ta=""
-	lut_conf="LUT_CONF_RUN206.dat"
-fi
+#if [ "$runnb" -eq "206" ]; then
+#	lut_ta=""
+#	lut_conf="LUT_CONF_RUN206.dat"
+#fi
       
 ###########################LUT_ELIADE###s#####################
 if [ -z "$lut_file" ]
@@ -92,7 +113,6 @@ echo -ne "LUT_ELIADE file	: "; tput setaf 2; echo " $lut_file";tput sgr0;
 echo -ne "LUT_CONF file	: "; tput setaf 2; echo " $lut_conf";tput sgr0;
 echo -ne "LUT_TA file	: "; tput setaf 2; echo " $lut_ta";tput sgr0;
 echo "--------------------------------------------------------"
-
 
 while test $runnb -le $runnb1
 do

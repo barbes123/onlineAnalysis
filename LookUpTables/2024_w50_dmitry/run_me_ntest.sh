@@ -29,6 +29,7 @@ lut_file=""
 lut_ta=""
 lut_conf="LUT_CONF_NTEST.dat" #LaBr
 lut_json="LUT_NTEST_20241203.json"
+lut_cut=""
 
 
 while test $runnb -le $runnb1
@@ -40,61 +41,30 @@ do
 
 
 unlink "$lut_link""LUT_ELIADE.dat"
-unlink "$lut_link""
-LUT_ELIADE.json"
+unlink "$lut_link""LUT_ELIADE.json"
 unlink "$lut_link""LUT_TA.dat"
 unlink "$lut_link""LUT_CONF.dat"
 
 
-if [ "$runnb" -eq "159" ]; then
-	lut_conf="coinc_gates_run_07.dat"
-	lut_json="LUT_ELIADE_S1_CL29_20241016_RUN159.json"
-	lut_ta="LUT_TA_TimeCalibGaussian_RUN159.dat"
-	lut_file=''
-elif [ "$runnb" -eq "160" ]; then
-
-	lut_conf="coinc_gates_run_07.dat"
-        lut_ta="LUT_TA_TimeCalibGaussian_RUN159.dat"
-        lut_json="LUT_ELIADE_S1_CL29_20241016_RUN160_V0.json"
-      	lut_file=""
-
-	if [ "$volnb" -le "89" ]; then
-		lut_json="LUT_ELIADE_S1_CL29_20241016_RUN160_V0.json"
-	
-	elif [ "$volnb" -ge "90" ]; then
- 		lut_json="LUT_ELIADE_S1_CL29_20241016_RUN160_V100.json"
-	fi
-elif [ "$runnb" -eq "161" ]; then
-	lut_json="LUT_ELIADE_S1_CL29_20241016_RUN160_V100.json"
-#	lut_conf="coinc_gates_run_07.dat"
-	lut_conf="coinc_gates_run_07_from_sim.dat"
-#	lut_ta="LUT_TA_TimeCalibGaussian_RUN159.dat"
-	lut_ta="LUT_TA_TimeCalibGaussian_RUN161.dat"
-elif [ "$runnb" -eq "162" ]; then
-	lut_json="LUT_ELIADE_S1_CL29_RUN162_152Eu.json"
-	lut_conf="coinc_gates_run_07.dat"
-	lut_ta="LUT_TA_TimeCalibGaussian_RUN161.dat"
-elif [ "$runnb" -eq "163" ]; then
-	lut_json="LUT_ELIADE_S1_CL29_RUN162_152Eu.json"
-	lut_conf="coinc_gates_run_07.dat"
-	lut_ta="LUT_TA_TimeCalibGaussian_RUN161.dat"
-elif [ "$runnb" -eq "164" ]; then
-	lut_json="LUT_ELIADE_S1_CL29_RUN162_152Eu.json"
-	lut_conf="coinc_gates_run_07.dat"
-	lut_ta="LUT_TA_TimeCalibGaussian_RUN161.dat"
-elif [ "$runnb" -eq "165" ]; then
-	lut_json="LUT_ELIADE_S1_CL29_RUN162_152Eu.json"
-	lut_conf="coinc_gates_run_07.dat"
-	lut_ta="LUT_TA_TimeCalibGaussian_RUN161.dat"
-elif [ "$runnb" -eq "166" ]; then
-	lut_json="LUT_ELIADE_S1_CL29_RUN162_152Eu.json"
-	lut_conf="coinc_gates_run_07.dat"
-	lut_ta="LUT_TA_TimeCalibGaussian_RUN161.dat"
-elif [ "$runnb" -eq "167" ]; then
-	lut_json="LUT_ELIADE_S1_CL29_RUN162_152Eu.json"
-	lut_conf="coinc_gates_run_07.dat"
-	lut_ta="LUT_TA_TimeCalibGaussian_RUN161.dat"
+if [ "$runnb" -ge "49" ]; then #for 10 MeV protons
+	lut_conf="LUT_CONF_NTEST_RF.dat"
+	lut_cut="neutron_cuts_run_56_64.root"
+	lut_ta="LUT_TA_RUN59.conf"
 fi
+
+
+if [ "$runnb" -ge "65" ]; then #for 10 MeV protons
+	lut_conf="LUT_CONF_NTEST_RF.dat"
+	lut_cut="neutron_cuts_run_56_64.root"
+	lut_ta="LUT_TA_RUN65.conf"
+fi
+
+if [ "$runnb" -ge "79" ]; then #for 10 MeV protons
+	lut_conf="LUT_CONF_NTEST_RF.dat"
+	lut_cut="neutron_cuts_run_56_64.root"
+	lut_ta="LUT_TA_RUN79.conf"
+fi
+
 
       
 ###########################LUT_ELIADE###s#####################
@@ -142,6 +112,7 @@ echo -ne "LUT_ELIADE file	: "; tput setaf 2; echo " $lut_file";tput sgr0;
 echo -ne "LUT_ELIADE json	: "; tput setaf 2; echo " $lut_json";tput sgr0;
 echo -ne "LUT_CONF file	: "; tput setaf 2; echo " $lut_conf";tput sgr0;
 echo -ne "LUT_TA file	: "; tput setaf 2; echo " $lut_ta";tput sgr0;
+echo -ne "LUT_CUT file  : "; tput setaf 2; echo " $lut_cut";tput sgr0;
 echo "--------------------------------------------------------"
    
     echo "Now I am starting run the selector run$runnb"_"$volnb.root"	

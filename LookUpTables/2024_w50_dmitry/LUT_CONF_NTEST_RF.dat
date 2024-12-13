@@ -1,0 +1,42 @@
+#------------------------------------
+#coinc_name coinc_id gate_ps
+#------------------------------------
+#hpge_hpge      11      100000
+#hpge_seg       12      100000
+#hpge_bgo       15      20000
+#labr_labr      33      4000
+#labr_bgo        35      40000
+#dee            177     1.5e5
+#labr_hpge      13      1.5e5
+#labr_elissa     37      3.5e5
+#labr_de_e      1773    1.5e5
+#------------------------------------
+#builder_parameters index value_ps
+#------------------------------------
+trg_det_type    9998    99
+#trg_domain     9999    900
+#window_length   1000    3e5
+#pre_window      1002    1e5
+window_length   1000    4e5
+pre_window      1002    0
+rf_time         9995    4e5
+distance	0	2.81
+#------------------------------------
+#Extra procedures: 1-yes; 0-no
+#------------------------------------
+Time_Alignement 0	1
+reference_dom   0	9
+UseFineTS       0	1
+Fold            0	0
+TOF		0	1	
+#------------------------------------
+#reaction param
+#------------------------------------
+#beta             0    0.088050000 #runs 69-118
+#------------------------------------
+det_present 9997 87 88 99
+#------------------------------------
+mDelila_raw 0 1000 0 1000 16384 0 16384
+mDelila     0 1000 0 1000 8192 0 32768
+
+

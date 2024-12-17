@@ -20,7 +20,7 @@
    {
       "channel": 1,
       "domain": 2,
-      "detType": 88,
+      "detType": 87,
       "serial": "SG01",
       "TimeOffset": 0.0,
       "theta": 0,
@@ -40,6 +40,24 @@
       "domain": 3,
       "detType": 88,
       "serial": "SG03",
+      "TimeOffset": 0.0,
+      "theta": 0,
+      "phi": 0,
+      "threshold": 25,
+      "cs_dom": 0,
+      "enable": 1,
+      "pol_order": 2,
+      "pol_list": [
+         0,
+         1
+      ],
+      "on": 0
+   },
+   {
+      "channel": 15,
+      "domain": 9,
+      "detType": 99,
+      "serial": "TRG",
       "TimeOffset": 0.0,
       "theta": 0,
       "phi": 0,
